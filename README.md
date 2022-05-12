@@ -27,4 +27,4 @@ Options:
     --out_dir=DIR       The path of output files.
 ```
 
-Running this command will takes all bam files under `out_dir` directory with specified `bam_pattern` pattern as input, and calculate the read coverage with specified `bin_size`. It also calculates the mean coverage and total number of mapped reads for each chromosome. 
+Running this command will take all bam files under `out_dir` directory with specified `bam_pattern` pattern as input, and calculate the read coverage with specified `bin_size`. It also calculates the mean coverage and total number of mapped reads for each chromosome. 
