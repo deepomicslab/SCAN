@@ -11,7 +11,7 @@ The following tools must be installed:
 
 ```
 $python binning.py -h
- Coverage binning.
+Coverage binning.
 
 Usage:
     binning.py --bam_dir=DIR --bam_pattern=STR [--bin_size=INT] [--ref=STR] --out_dir=DIR
