@@ -1,5 +1,4 @@
 # SCAN
-single cell allelic-specific copy number phasing
 
 ## Prerequisites
 
@@ -7,7 +6,9 @@ The following tools must be installed:
 + samtools: version > 1.13, which contains `samtools coverage` function
 + bedtools
 
-## Call read binning
+## Call read binning for CNV
+
+Please call CNV read binning for all normal and tumor samples.
 
 ```
 $python binning.py -h
