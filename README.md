@@ -6,7 +6,7 @@ The following tools must be installed:
 + samtools: version > 1.13, which contains `samtools coverage` function
 + bedtools
 
-## Call read binning for CNV
+## Call CNV read binning
 
 Please call CNV read binning for all normal and tumor samples.
 
