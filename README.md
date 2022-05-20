@@ -67,4 +67,23 @@ Please keep all output from manta, then run `parse_manta.py` for all vcf file.
 parse_manta.py call --sv_fn=sv_vcf_file
 ```
 
+Cluster SVs based on breakpoint distance, and divide SV information into different groups.
 
+``` 
+python ~/Ambigram/script/bfb_scripts.py cluster_sv -sv [path to SV file]
+```
+Generate segments according to SV breakpoints, and extract coverage depth of segments from the corresponding BAM file.
+
+``` 
+python ~/Ambigram/script/bfb_scripts.py generate_seg -sv [path to SV file] -bam [path to BAM file] 
+```
+
+Given a set of regions, call coverage depth of each base from a BAM file for drawing a cvoerage distribution plot.
+``` 
+python ~/Ambigram/script/bfb_scripts.py call_depth -seg [path to SEG file] -bam [path to BAM file] 
+```
+Generate the input file (.lh file) of Ambigram by integrating sv.txt and seg.txt files. (to be updated under Ambigram/script)
+``` 
+python ~/SVAS/scripts/csv_sv.py call --sv_fn=[path to SV file] --seg_fn=[path to SEG file] --seg_only=1 --bfb_sv=1 
+```
+Install Ambigram and run the program with .lh file to reconstruct BFB haplotypes. Please refer to https://github.com/deepomicslab/Ambigram.
